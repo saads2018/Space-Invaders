@@ -1,0 +1,14 @@
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\bin\Debug\Space Invaders.exe.config
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\bin\Debug\Space Invaders.exe.manifest
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\bin\Debug\Space Invaders.application
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\bin\Debug\Space Invaders.exe
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\bin\Debug\Space Invaders.pdb
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\obj\x86\Debug\wfSpaceInvaders.csprojAssemblyReference.cache
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\obj\x86\Debug\WindowsFormsApplication1.frmInvaders.resources
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\obj\x86\Debug\wfSpaceInvaders.csproj.GenerateResource.cache
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\obj\x86\Debug\Space Invaders.TrustInfo.xml
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\obj\x86\Debug\Space Invaders.exe.manifest
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\obj\x86\Debug\Space Invaders.application
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\obj\x86\Debug\Space Invaders.exe
+C:\Users\sauds\OneDrive\Desktop\winformsinvaders-master\obj\x86\Debug\Space Invaders.pdb
