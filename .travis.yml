@@ -1,0 +1,23 @@
+language: csharp
+mono: none
+dotnet: 3.12.0
+solution: wfSpaceInvaders/wfSpaceInvaders.sln
+
+before_script:
+  - nuget restore wfSpaceInvaders/wfSpaceInvaders.sln
+
+script:
+  - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
+  - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj 
+
+email:
+    if: branch = master
+    recipients:
+      - 101227897@students.swinburne.edu.my
+      - 101227910@students.swinburne.edu.my
+      - 101229822@students.swinburne.edu.my
+    on_success: never
+    on_failure: always
+
+
+
