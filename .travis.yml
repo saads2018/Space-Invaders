@@ -1,5 +1,5 @@
 language: csharp
-dotnet: 3.1.2
+dotnet: 2.1
 solution: wfSpaceInvaders/wfSpaceInvaders.sln
 
 before_script:
