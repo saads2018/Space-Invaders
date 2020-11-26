@@ -8,6 +8,7 @@ before_script:
 
 script:
   - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
+  - dotnet build wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj 
   - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
 
 notifications:
