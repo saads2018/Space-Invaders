@@ -10,8 +10,8 @@ before_script:
   - nuget restore wfSpaceInvaders/wfSpaceInvaders.sln
 
 script:
-  - dotnet restore
-  - dotnet test 
+  - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
+  - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
 
 notifications:
 email:
