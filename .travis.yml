@@ -1,9 +1,8 @@
 language: csharp
-solution: solution-name.sln
+solution: wfSpaceInvaders/wfSpaceInvaders.sln
 mono:
   - latest
-solution: wfSpaceInvaders/wfSpaceInvaders.sln
-
+  
 script:
   - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj 
 
