@@ -2,6 +2,11 @@ language: csharp
 dotnet: 3.1.402
 solution: wfSpaceInvaders/wfSpaceInvaders.sln
 
+matrix:
+  include:
+    - dist: bionic
+    - dist: xenial
+
 before_script:
   - nuget restore wfSpaceInvaders/wfSpaceInvaders.sln
 
