@@ -2,9 +2,9 @@ language: csharp
 solution: wfSpaceInvaders/wfSpaceInvaders.sln
 mono:
   - latest
-  
 script:
-  - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj 
+  - dotnet restore
+  - dotnet test
 
 
 
