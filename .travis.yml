@@ -1,28 +1,12 @@
 language: csharp
-dotnet: 3.1.402
+solution: solution-name.sln
+mono:
+  - latest
 solution: wfSpaceInvaders/wfSpaceInvaders.sln
 
-matrix:
-  include:
-    - dist: bionic
-    - dist: xenial
-
-before_script:
-  - nuget restore wfSpaceInvaders/wfSpaceInvaders.sln
-
 script:
-  - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
   - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj 
 
-notifications:
-email:
-    if: branch = master
-    recipients:
-      - 101227897@students.swinburne.edu.my
-      - 101227910@students.swinburne.edu.my
-      - 101229822@students.swinburne.edu.my
-    on_success: never
-    on_failure: always
 
 
 
