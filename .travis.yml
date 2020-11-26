@@ -1,5 +1,5 @@
 language: csharp
-mono: 5.2.0
+mono: latest
 dotnet: 3.1.402
 solution: wfSpaceInvaders/wfSpaceInvaders.sln
 
