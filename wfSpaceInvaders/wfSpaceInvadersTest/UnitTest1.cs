@@ -10,7 +10,7 @@ namespace wfSpaceInvadersTest
         {
             int a =10; 
             int b=24;
-            Assert.AreEqual(34, a + b);           
+            Assert.AreEqual(3, a + b);           
         }
 
         [TestMethod]
