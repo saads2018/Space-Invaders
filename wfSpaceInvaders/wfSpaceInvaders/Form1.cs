@@ -1,5 +1,7 @@
 using System;
 using System.Windows.Forms;
+using System.IO;
+using static System.Console;
 
 namespace WindowsFormsApplication1
 {
@@ -20,7 +22,7 @@ namespace WindowsFormsApplication1
         public int ciclos = 0;
         public int aproximado = 0;
         public int score = 0;
-
+        public string Name = "";
         public PictureBox[] colecao = new PictureBox[numinvaders + 1];
 
         public frmInvaders()
@@ -212,7 +214,9 @@ namespace WindowsFormsApplication1
                     // Jogador vence se derrotou todos invaders (When the player wins the game by killing all invaders)
                     if (score == 900)
                     {
-                        MessageBox.Show("Parabéns!!!\nVocê Venceu!\nCongratulations!\nYou Win!");
+                        File.AppendAllText("HighScores.txt",
+                        (score) + "");
+                        MessageBox.Show("Congratulations!\nYou Win!");
                         btnNovoJogo.Enabled = true;
                         gamestart = false;
                     }
@@ -251,12 +255,14 @@ namespace WindowsFormsApplication1
                     if (Math.Abs(img.Left - picTiroMon.Left) < 30 && Math.Abs(img.Top - picTiroMon.Top) < 10)
                     {
                         // GameOver
+                        File.AppendAllText("HighScores.txt",
+                        (score) + "");
                         picTiroMon.Visible = false;
                         picTiroJog.Visible = false;
                         tirodisponivelmon = true;
                         btnNovoJogo.Enabled = true;
                         gamestart = false;
-                        MessageBox.Show("Fim Do Jogo!\nVocê Perdeu\nGame Over!\nYou Lose");
+                        MessageBox.Show("Game Over!\nYou Lose");
                         timer1.Enabled = false;
                         Application.DoEvents();
                     }
@@ -274,7 +280,10 @@ namespace WindowsFormsApplication1
 
         private void frmInvaders_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Bem Vindo Ao Winforms Space Invaders!!!\nWelcome to Winforms Space Invaders\nNum 4 ou A - Esquerda (Left)\nNum 6 ou D - Direita (Right)\nSpace - Atirar (Shoot)");
+
+            DialogResult pln = new DialogResult();
+            PlayerName frm = new PlayerName();
+            pln = frm.ShowDialog();
 
             // Invaders
             colecao[1] = inv1;
