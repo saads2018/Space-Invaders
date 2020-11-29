@@ -1,6 +1,7 @@
 language: csharp
 solution: wfSpaceInvaders/wfSpaceInvaders.sln
 mono: latest
+os: windows
 dotnet: 3.1.2
 script:
   - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
