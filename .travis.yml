@@ -4,5 +4,5 @@ solution: wfSpaceInvaders/wfSpaceInvaders.sln
 mono: none
 script:
   - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
-  - dotnet build 
+  - dotnet build wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
   - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/bin/Debug/netcoreapp3.1/wfSpaceInvadersTest.dll
