@@ -66,7 +66,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Font = new System.Drawing.Font("ArcadeClassic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(205, 75);
+            this.label2.Location = new System.Drawing.Point(190, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 23);
             this.label2.TabIndex = 6;
@@ -80,6 +80,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(491, 438);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // HighScores
             // 

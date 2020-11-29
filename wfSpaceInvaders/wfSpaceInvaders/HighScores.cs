@@ -33,24 +33,30 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Console.Beep(1000, 100);
             DialogResult = DialogResult.Cancel;
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void DisplayHighScores()
         {
-                long i;
-                long end = lines.Length;
-                
+            long i;
+            long end = lines.Length;
 
-                for (i = 0; i < end; i++)
-                {
-                    label2.Text += lines[i] + Environment.NewLine;
-                }
+
+            for (i = 0; i < end; i++)
+            {
+                label2.Text += lines[i] + Environment.NewLine;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

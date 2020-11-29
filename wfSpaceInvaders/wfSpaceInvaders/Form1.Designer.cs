@@ -32,10 +32,10 @@ namespace WindowsFormsApplication1
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInvaders));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnNovoJogo = new System.Windows.Forms.Button();
-            this.lblScore = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.picTiroMon = new System.Windows.Forms.PictureBox();
             this.picTiroJog = new System.Windows.Forms.PictureBox();
             this.picJog = new System.Windows.Forms.PictureBox();
@@ -60,7 +60,18 @@ namespace WindowsFormsApplication1
             this.inv3 = new System.Windows.Forms.PictureBox();
             this.inv1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.btnNovoJogo = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTiroMon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTiroJog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picJog)).BeginInit();
@@ -85,31 +96,16 @@ namespace WindowsFormsApplication1
             ((System.ComponentModel.ISupportInitialize)(this.inv3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnNovoJogo
-            // 
-            this.btnNovoJogo.Location = new System.Drawing.Point(23, 570);
-            this.btnNovoJogo.Name = "btnNovoJogo";
-            this.btnNovoJogo.Size = new System.Drawing.Size(114, 31);
-            this.btnNovoJogo.TabIndex = 1;
-            this.btnNovoJogo.Text = "Novo Jogo";
-            this.btnNovoJogo.UseVisualStyleBackColor = true;
-            this.btnNovoJogo.Click += new System.EventHandler(this.btnNovoJogo_Click);
-            // 
-            // lblScore
-            // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(591, 576);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(86, 25);
-            this.lblScore.TabIndex = 3;
-            this.lblScore.Text = "Score: 0";
             // 
             // timer2
             // 
@@ -120,6 +116,8 @@ namespace WindowsFormsApplication1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.picTiroMon);
             this.panel1.Controls.Add(this.picTiroJog);
             this.panel1.Controls.Add(this.picJog);
@@ -144,11 +142,34 @@ namespace WindowsFormsApplication1
             this.panel1.Controls.Add(this.inv3);
             this.panel1.Controls.Add(this.inv1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(23, 13);
+            this.panel1.Location = new System.Drawing.Point(-1, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 540);
+            this.panel1.Size = new System.Drawing.Size(811, 540);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(73, 495);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(34, 37);
+            this.pictureBox6.TabIndex = 28;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(26, 495);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(34, 37);
+            this.pictureBox5.TabIndex = 27;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
             // 
             // picTiroMon
             // 
@@ -368,17 +389,117 @@ namespace WindowsFormsApplication1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(775, 541);
+            this.pictureBox1.Size = new System.Drawing.Size(811, 541);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("ArcadeClassic", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.Lime;
+            this.lblScore.Location = new System.Drawing.Point(197, 20);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(37, 37);
+            this.lblScore.TabIndex = 5;
+            this.lblScore.Text = "0";
+            this.lblScore.Click += new System.EventHandler(this.lblScore_Click);
+            // 
+            // btnNovoJogo
+            // 
+            this.btnNovoJogo.BackColor = System.Drawing.Color.Lime;
+            this.btnNovoJogo.Font = new System.Drawing.Font("ArcadeClassic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoJogo.Location = new System.Drawing.Point(292, 1);
+            this.btnNovoJogo.Name = "btnNovoJogo";
+            this.btnNovoJogo.Size = new System.Drawing.Size(225, 64);
+            this.btnNovoJogo.TabIndex = 4;
+            this.btnNovoJogo.Text = "Start Game";
+            this.btnNovoJogo.UseVisualStyleBackColor = false;
+            this.btnNovoJogo.Click += new System.EventHandler(this.btnNovoJogo_Click_1);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(523, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(287, 70);
+            this.panel2.TabIndex = 27;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(222, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 45);
+            this.pictureBox4.TabIndex = 27;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(158, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 45);
+            this.pictureBox3.TabIndex = 26;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(97, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 45);
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("ArcadeClassic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(3, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "LIVES";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.lblScore);
+            this.panel3.Location = new System.Drawing.Point(-1, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(287, 70);
+            this.panel3.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("ArcadeClassic", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(19, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(172, 37);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "X       SCORE";
             // 
             // frmInvaders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 613);
-            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnNovoJogo);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -390,6 +511,8 @@ namespace WindowsFormsApplication1
             this.Load += new System.EventHandler(this.frmInvaders_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmInvaders_KeyPress);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTiroMon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTiroJog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picJog)).EndInit();
@@ -414,19 +537,23 @@ namespace WindowsFormsApplication1
             ((System.ComponentModel.ISupportInitialize)(this.inv3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inv1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button btnNovoJogo;
-        private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox picTiroMon;
-        private System.Windows.Forms.PictureBox picTiroJog;
+        public System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Timer timer2;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.PictureBox picTiroMon;
+        public System.Windows.Forms.PictureBox picTiroJog;
         public System.Windows.Forms.PictureBox picJog;
         public System.Windows.Forms.PictureBox pícParede2;
         public System.Windows.Forms.PictureBox pícParede1;
@@ -449,6 +576,17 @@ namespace WindowsFormsApplication1
         public System.Windows.Forms.PictureBox inv3;
         public System.Windows.Forms.PictureBox inv1;
         public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label lblScore;
+        public System.Windows.Forms.Button btnNovoJogo;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.PictureBox pictureBox6;
+        public System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 
