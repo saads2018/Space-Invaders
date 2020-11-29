@@ -1,6 +1,8 @@
 os: windows
 language: csharp
 solution: wfSpaceInvaders/wfSpaceInvaders.sln
+mono: none
+language: bash
 script:
   - choco install dotnetcore-sdk
   - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
