@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult newGame = new DialogResult();
-            frmInvaders frm = new frmInvaders();
+            PlayerName frm = new PlayerName();
             newGame = frm.ShowDialog();
             
            
@@ -49,10 +49,9 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
-
-  
-        
-
+        }
     }
 }

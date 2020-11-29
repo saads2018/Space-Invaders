@@ -215,8 +215,8 @@ namespace WindowsFormsApplication1
                     if (score == 900)
                     {
                         File.AppendAllText("HighScores.txt",
-                        (score) + "");
-                        MessageBox.Show("Congratulations!\nYou Win!");
+                        (Name + ":" + score) + Environment.NewLine);
+                        MessageBox.Show("Congratulations!\nYou Win!");                       
                         btnNovoJogo.Enabled = true;
                         gamestart = false;
                     }
@@ -256,7 +256,7 @@ namespace WindowsFormsApplication1
                     {
                         // GameOver
                         File.AppendAllText("HighScores.txt",
-                        (score) + "");
+                        (Name+":"+score) + Environment.NewLine);
                         picTiroMon.Visible = false;
                         picTiroJog.Visible = false;
                         tirodisponivelmon = true;
@@ -281,10 +281,8 @@ namespace WindowsFormsApplication1
         private void frmInvaders_Load(object sender, EventArgs e)
         {
 
-            DialogResult pln = new DialogResult();
-            PlayerName frm = new PlayerName();
-            pln = frm.ShowDialog();
-
+           
+            
             // Invaders
             colecao[1] = inv1;
             colecao[2] = inv2;
@@ -310,5 +308,17 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void picJog_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
