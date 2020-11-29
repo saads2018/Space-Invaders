@@ -7,5 +7,5 @@ language: bash
 script:
   - choco install dotnetcore-sdk
   - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
-  - bu wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
+  - msbuild wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
   - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/bin/Debug/netcoreapp3.1/wfSpaceInvadersTest.dll
