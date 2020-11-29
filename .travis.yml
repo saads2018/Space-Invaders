@@ -3,7 +3,6 @@ language: csharp
 solution: wfSpaceInvaders/wfSpaceInvaders.sln
 mono: none
 script:
-  - choco install dotnetcore-sdk
   - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
-  - dotnet build wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
+  - dotnet build 
   - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/bin/Debug/netcoreapp3.1/wfSpaceInvadersTest.dll
