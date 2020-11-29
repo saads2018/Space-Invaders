@@ -1,7 +1,8 @@
 os: windows
 language: csharp
 solution: wfSpaceInvaders/wfSpaceInvaders.sln
-mono: none
+mono: latest
+dotnet: latest
 language: bash
 script:
   - choco install dotnetcore-sdk
