@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -17,7 +17,6 @@ namespace WindowsFormsApplication1
         public bool tirodisponivelmon = true;
         public int movimento = 5;
         public int movimento2 = 40;
-        public int canonMovement = 40;
         public int ciclos = 0;
         public int aproximado = 0;
         public int score = 0;
@@ -74,7 +73,77 @@ namespace WindowsFormsApplication1
         {
             if (gamestart == false)
             {
-                InitializeValues();
+                inv1.Visible = true;
+                inv2.Visible = true;
+                inv3.Visible = true;
+                inv4.Visible = true;
+                inv5.Visible = true;
+                inv6.Visible = true;
+                inv7.Visible = true;
+                inv8.Visible = true;
+                inv9.Visible = true;
+                inv10.Visible = true;
+                inv11.Visible = true;
+                inv12.Visible = true;
+                inv13.Visible = true;
+                inv14.Visible = true;
+                inv15.Visible = true;
+                inv16.Visible = true;
+                inv17.Visible = true;
+                inv18.Visible = true;
+
+                inv1.Top = 16;
+                inv2.Top = 16;
+                inv3.Top = 16;
+                inv4.Top = 16;
+                inv5.Top = 16;
+                inv6.Top = 16;
+                inv7.Top = 73;
+                inv8.Top = 73;
+                inv9.Top = 73;
+                inv10.Top = 73;
+                inv11.Top = 73;
+                inv12.Top = 73;
+                inv13.Top = 130;
+                inv14.Top = 130;
+                inv15.Top = 130;
+                inv16.Top = 130;
+                inv17.Top = 130;
+                inv18.Top = 130;
+
+                inv1.Left = 12;
+                inv2.Left = 93;
+                inv3.Left = 171;
+                inv4.Left = 247;
+                inv5.Left = 325;
+                inv6.Left = 404;
+                inv7.Left = 28;
+                inv8.Left = 109;
+                inv9.Left = 187;
+                inv10.Left = 263;
+                inv11.Left = 341;
+                inv12.Left = 420;
+                inv13.Left = 12;
+                inv14.Left = 93;
+                inv15.Left = 171;
+                inv16.Left = 247;
+                inv17.Left = 325;
+                inv18.Left = 404;
+                movimento = 5;
+                movimento2 = 40;
+                ciclos = 0;
+                aproximado = 0;
+                score = 0;
+                picTiroJog.Visible = false;
+                picTiroMon.Visible = false;
+                tirodisponivel = true;
+                tirodisponivelmon = true;
+                picJog.Left = 345;
+                gamestart = true;
+                timer1.Enabled = true;
+                btnNovoJogo.Enabled = false;
+                panel1.Focus();
+                lblScore.Text = "Score: 0";
             }
         }
 
@@ -83,12 +152,25 @@ namespace WindowsFormsApplication1
         {
             int n = e.KeyChar;
 
-            CanonMovement(n);
+            // Esquerda (Left)
+            if (gamestart && (n == 52 || n == 97) && picJog.Left > 25)
+            {
+                picJog.Left -= 15;
+            }
+
+            // Direita (Right)
+            if (gamestart && (n == 54 || n == 100) && picJog.Left < 720)
+            {
+                picJog.Left += 15;
+            }
 
             // Atirar (Shoot)
             if (gamestart && tirodisponivel && n == 32 && ((picJog.Left < 80) || ((picJog.Left > 230) && (picJog.Left < 490)) || (picJog.Left > 630)))
             {
-                CanonShoot();
+                picTiroJog.Left = picJog.Left + 18;
+                picTiroJog.Top = picJog.Top - 25;
+                picTiroJog.Visible = true;
+                tirodisponivel = false;
             }
         }
 
@@ -110,7 +192,12 @@ namespace WindowsFormsApplication1
                         {
                             if (Math.Abs(img.Left - picTiroJog.Left) < 30 && Math.Abs(img.Top - picTiroJog.Top) < 10)
                             {
-                                DestroyInvader(img);
+                                img.Visible = false;
+                                picTiroJog.Visible = false;
+                                score += 50;
+                                lblScore.Text = "Score: " + score;
+                                tirodisponivel = true;
+                                break;
                             }
                         }
                     }
@@ -214,115 +301,5 @@ namespace WindowsFormsApplication1
         {
 
         }
-
-        public void CanonMovement(int n)
-        {
-            // Esquerda (Left)
-            if (gamestart && (n == 52 || n == 97) && picJog.Left > 25)
-            {
-                picJog.Left -= canonMovement;
-            }
-
-            // Direita (Right)
-            if (gamestart && (n == 54 || n == 100) && picJog.Left < 720)
-            {
-                picJog.Left += canonMovement;
-            }
-        }
-
-        public void CanonShoot()
-        {
-
-            picTiroJog.Left = picJog.Left + 18;
-            picTiroJog.Top = picJog.Top - 25;
-            picTiroJog.Visible = true;
-            tirodisponivel = false;
-        }
-
-        public void DestroyInvader(PictureBox img)
-        {
-            img.Visible = false;
-            picTiroJog.Visible = false;
-            score += 50;
-            lblScore.Text = score.ToString();
-            tirodisponivel = true;
-
-        }
-
-        public void InitializeValues()
-        {
-            inv1.Visible = true;
-            inv2.Visible = true;
-            inv3.Visible = true;
-            inv4.Visible = true;
-            inv5.Visible = true;
-            inv6.Visible = true;
-            inv7.Visible = true;
-            inv8.Visible = true;
-            inv9.Visible = true;
-            inv10.Visible = true;
-            inv11.Visible = true;
-            inv12.Visible = true;
-            inv13.Visible = true;
-            inv14.Visible = true;
-            inv15.Visible = true;
-            inv16.Visible = true;
-            inv17.Visible = true;
-            inv18.Visible = true;
-
-            inv1.Top = 16;
-            inv2.Top = 16;
-            inv3.Top = 16;
-            inv4.Top = 16;
-            inv5.Top = 16;
-            inv6.Top = 16;
-            inv7.Top = 73;
-            inv8.Top = 73;
-            inv9.Top = 73;
-            inv10.Top = 73;
-            inv11.Top = 73;
-            inv12.Top = 73;
-            inv13.Top = 130;
-            inv14.Top = 130;
-            inv15.Top = 130;
-            inv16.Top = 130;
-            inv17.Top = 130;
-            inv18.Top = 130;
-
-            inv1.Left = 12;
-            inv2.Left = 93;
-            inv3.Left = 171;
-            inv4.Left = 247;
-            inv5.Left = 325;
-            inv6.Left = 404;
-            inv7.Left = 28;
-            inv8.Left = 109;
-            inv9.Left = 187;
-            inv10.Left = 263;
-            inv11.Left = 341;
-            inv12.Left = 420;
-            inv13.Left = 12;
-            inv14.Left = 93;
-            inv15.Left = 171;
-            inv16.Left = 247;
-            inv17.Left = 325;
-            inv18.Left = 404;
-            movimento = 5;
-            movimento2 = 40;
-            ciclos = 0;
-            aproximado = 0;
-            score = 0;
-            picTiroJog.Visible = false;
-            picTiroMon.Visible = false;
-            tirodisponivel = true;
-            tirodisponivelmon = true;
-            picJog.Left = 345;
-            gamestart = true;
-            timer1.Enabled = true;
-            btnNovoJogo.Enabled = false;
-            panel1.Focus();
-            lblScore.Text = "Score: 0";
-        }
-
     }
 }
