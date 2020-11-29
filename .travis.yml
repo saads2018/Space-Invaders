@@ -1,9 +1,8 @@
 os: windows
 language: csharp
+solution: wfSpaceInvaders/wfSpaceInvaders.sln
 mono: none
-dist: xenial
-install:
-- dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
 script:
+  - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
   - msbuild wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
   - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/bin/Debug/netcoreapp3.1/wfSpaceInvadersTest.dll
