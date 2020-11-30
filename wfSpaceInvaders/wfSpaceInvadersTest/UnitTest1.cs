@@ -21,7 +21,8 @@ namespace wfSpaceInvadersTest
             Assert.AreEqual(355, frm.picJog.Left);
             frm.Dispose();
         }
-
+        
+        [TestMethod]
         public void CheckIfCanonShoots()
         {
             frmInvaders frm = new frmInvaders();
@@ -104,6 +105,7 @@ namespace wfSpaceInvadersTest
             frm.Dispose();
         }
 
+        [TestMethod]
         public void CheckSpeedPerk()
         {
             frmInvaders frm = new frmInvaders();
