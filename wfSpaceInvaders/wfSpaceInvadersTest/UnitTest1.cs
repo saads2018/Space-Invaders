@@ -21,7 +21,21 @@ namespace wfSpaceInvadersTest
             Assert.AreEqual(355, frm.picJog.Left);
             frm.Dispose();
         }
-               
+
+        [TestMethod]
+        public void CheckIfCanonShoots()
+        {
+            frmInvaders frm = new frmInvaders();
+            frm.InitializeValues();
+            frm.CanonShoot();
+            bool visible = frm.picTiroJog.Visible;
+            int x = frm.picJog.Top;
+            Assert.AreEqual(373, frm.picTiroJog.Left);
+            Assert.AreEqual(x - 25, frm.picTiroJog.Top);
+            Assert.AreEqual(false, frm.tirodisponivel);
+            frm.Dispose();
+        }
+
 
         [TestMethod]
         public void CheckDifficulty()
@@ -89,6 +103,31 @@ namespace wfSpaceInvadersTest
             frm.GameOver();
             Assert.AreEqual(true, frm.btnNovoJogo.Enabled);
             Assert.AreEqual(false, frm.gamestart);
+            frm.Dispose();
+        }
+
+
+        [TestMethod]
+        public void CheckSpeedPerk()
+        {
+            frmInvaders frm = new frmInvaders();
+            frm.InitializeValues();
+            int speed = frm.canonMovement;
+            frm.SpeedPerk();
+            Assert.AreEqual(true, frm.perkUse);
+            Assert.AreEqual(speed + 10, frm.canonMovement);
+            frm.Dispose();
+        }
+
+
+        [TestMethod]
+        public void CheckInvincibilityPerk()
+        {
+            frmInvaders frm = new frmInvaders();
+            frm.InitializeValues();
+            frm.InvincibilityPerk();
+            Assert.AreEqual(true, frm.perkUse);
+            Assert.AreEqual(true, frm.invble);
             frm.Dispose();
         }
 
