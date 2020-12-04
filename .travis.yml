@@ -7,3 +7,12 @@ script:
   - dotnet restore wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
   - dotnet msbuild wfSpaceInvaders/wfSpaceInvadersTest/wfSpaceInvadersTest.csproj
   - dotnet test wfSpaceInvaders/wfSpaceInvadersTest/bin/Debug/netcoreapp3.1/wfSpaceInvadersTest.dll
+  
+  notifications:
+    email:     
+      recipients:
+        - 101227897@students.swinburne.edu.my
+        - 101227910@students.swinburne.edu.my
+        - 101229822@students.swinburne.edu.my
+      on_success: never
+      on_failure: always
